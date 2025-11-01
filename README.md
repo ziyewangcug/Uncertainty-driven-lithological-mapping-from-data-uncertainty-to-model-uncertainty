@@ -1,8 +1,11 @@
 Uncertainty-driven lithological mapping: from data uncertainty to model uncertainty (UQDL v1.0)
 
 Overview
+
 Traditional lithological mapping with remote sensing data and deep learning models often ignores the sources of uncertainty arising from:
+
 Data uncertainty — due to noise, limited observation, sampling issues, and measurement errors.
+
 Model uncertainty — due to stochasticity in model parameters, architectures, or optimization.
 
 UQDL v1.0 investigates uncertainty quantification in lithological mapping using remote sensing data and a Bayesian U-Net model:
@@ -21,21 +24,27 @@ Quantifying data uncertainty through simulating noisy inputs and probabilistic l
 Main features:
 
 Generates multiple soft label realizations (generate_soft_labels()).
+
 Trains U-Net models across NUM_ITERATIONS simulations.
+
 Injects Gaussian noise to evaluate prediction stability.
 
 Outputs:
 
 soft_labels_collection.mat
+
 uncertainty_predictions_cube.mat — a cube of predictions for uncertainty estimation.
+
 training_log.csv — per-iteration training metrics.
 
-3. unet_model_uncertainty_quantification.py
+2. unet_model_uncertainty_quantification.py
+
 Quantifies model uncertainty using Monte Carlo dropout.
 
 Main features:
 
 Builds a dropout-regularized U-Net (build_model()).
+
 Performs Monte Carlo sampling during inference (evaluate_model_mc_dropout()).
 
 Outputs:
