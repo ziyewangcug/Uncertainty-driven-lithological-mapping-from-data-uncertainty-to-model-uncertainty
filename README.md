@@ -17,23 +17,25 @@ Main features:
 Generates multiple soft label realizations (generate_soft_labels()).
 Trains U-Net models across NUM_ITERATIONS simulations.
 Injects Gaussian noise to evaluate prediction stability.
+
 Outputs:
 soft_labels_collection.mat
 uncertainty_predictions_cube.mat — a cube of predictions for uncertainty estimation.
 training_log.csv — per-iteration training metrics.
 
-2. unet_model_uncertainty_quantification.py
+3. unet_model_uncertainty_quantification.py
 Quantifies model uncertainty using Monte Carlo dropout.
 Main features:
 Builds a dropout-regularized U-Net (build_model()).
 Performs Monte Carlo sampling during inference (evaluate_model_mc_dropout()).
+
 Outputs:
 mc_pred_map.mat — multiple Monte Carlo-sampled predictions.
 Training logs (training_metrics.csv)— per-iteration training metrics
 Visualization of mean prediction and uncertainty map.
 
 Case study data
-14-bands ASTER data in VNIR-SWIR-TIR regions. 
+14-bands ASTER data in VNIR-SWIR-TIR regions.
 image_train.tif — training image.
 class_train.tif — training label.
 image_test.tif — testing image.
