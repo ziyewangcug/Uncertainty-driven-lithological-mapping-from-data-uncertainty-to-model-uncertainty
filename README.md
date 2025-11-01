@@ -17,6 +17,7 @@ UQDL v1.0 investigates uncertainty quantification in lithological mapping using 
 (3) Visualizing uncertainties using SHAP technology to enhance model explainability.
 
 Key Scripts
+
 1. unet_data_uncertainty_quantification.py
 
 Quantifying data uncertainty through simulating noisy inputs and probabilistic labels.
@@ -50,23 +51,31 @@ Performs Monte Carlo sampling during inference (evaluate_model_mc_dropout()).
 Outputs:
 
 mc_pred_map.mat — multiple Monte Carlo-sampled predictions.
-Training logs (training_metrics.csv)— per-iteration training metrics
+
+Training logs (training_metrics.csv)— per-iteration training metrics.
+
 Visualization of mean prediction and uncertainty map.
 
 Case study data
 
 14-bands ASTER data in VNIR-SWIR-TIR regions.
+
 image_train.tif — training image.
+
 class_train.tif — training label.
+
 image_test.tif — testing image.
 
 Installation
 
 Python ≥ 3.7
+
 TensorFlow ≥ 2.1
 
 Author & Contact
 
 Author: Ziye Wang
+
 Affiliation: China University of Geosciences
+
 Contact: ziyewang@cug.edu.cn
