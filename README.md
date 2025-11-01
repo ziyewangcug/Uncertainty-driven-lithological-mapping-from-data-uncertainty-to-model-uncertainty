@@ -1,0 +1,2 @@
+# Uncertainty-driven-lithological-mapping-from-data-uncertainty-to-model-uncertainty
+This code investigates uncertainty quantification in lithological mapping using remote sensing data and a Bayesian U-Net model. Two types of uncertainty: data uncertainty, arising from biased geological maps, mixed pixels, and labeling errors; and model uncertainty, originating from network architecture and parameter variability, are considered. 
