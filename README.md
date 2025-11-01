@@ -7,12 +7,15 @@ Model uncertainty — due to stochasticity in model parameters, architectures, o
 
 UQDL v1.0 investigates uncertainty quantification in lithological mapping using remote sensing data and a Bayesian U-Net model:
 (1) Data uncertainty quantification via stochastic simulation of probabilistic labels and noisy input images.
+
 (2) Model uncertainty quantification via a Bayesian U-Net fully convolutional neural network (U-Net FCN) incorporating Monte Carlo Dropout.
+
 (3) Visualizing uncertainties using SHAP technology to enhance model explainability.
 
 Key Scripts
 1. unet_data_uncertainty_quantification.py
 Quantifying data uncertainty through simulating noisy inputs and probabilistic labels.
+
 Main features:
 Generates multiple soft label realizations (generate_soft_labels()).
 Trains U-Net models across NUM_ITERATIONS simulations.
@@ -25,6 +28,7 @@ training_log.csv — per-iteration training metrics.
 
 3. unet_model_uncertainty_quantification.py
 Quantifies model uncertainty using Monte Carlo dropout.
+
 Main features:
 Builds a dropout-regularized U-Net (build_model()).
 Performs Monte Carlo sampling during inference (evaluate_model_mc_dropout()).
